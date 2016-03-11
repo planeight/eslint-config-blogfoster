@@ -4,10 +4,10 @@ module.exports = {
     'node': true,
     'mocha': true,
   },
-  parser: 'babel-eslint',
+  parser: require.resolve('babel-eslint'),
   extends: [
-    'airbnb/base',
-    'rules/default',
-  ].map(require.resolve),
+    require.resolve('eslint-config-airbnb/base'),
+    require.resolve('./rules/default')
+  ],
   rules: {}
 };
