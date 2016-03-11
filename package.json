@@ -10,7 +10,7 @@
   "bugs": {
     "url": "https://github.com/blogfoster/eslint-config-blogfoster/issues"
   },
-  "devDependencies": {
+  "dependencies": {
     "babel-eslint": "^5.0.0",
     "eslint": "^2.3.0",
     "eslint-config-airbnb": "^6.1.0",
