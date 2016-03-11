@@ -1,0 +1,18 @@
+{
+  "name": "eslint-config-blogfoster",
+  "version": "1.0.0",
+  "description": "blogfoster specific eslint rules",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blogfoster/eslint-config-blogfoster.git"
+  },
+  "bugs": {
+    "url": "https://github.com/blogfoster/eslint-config-blogfoster/issues"
+  },
+  "devDependencies": {
+    "eslint": "^2.3.0",
+    "eslint-config-airbnb": "^6.1.0",
+    "eslint-plugin-react": "^4.2.1"
+  }
+}
