@@ -1,8 +1,8 @@
 module.exports = {
   extends: [
-    require.resolve('eslint-config-airbnb/base'),
-    require.resolve('./rules/default'),
-    require.resolve('./rules/react')
+    'eslint-config-airbnb/base',
+    './rules/default.js',
+    './rules/react.js'
   ],
   rules: {}
 };
