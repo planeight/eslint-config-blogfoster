@@ -11,9 +11,15 @@
     "type": "git",
     "url": "git+https://github.com/blogfoster/eslint-config-blogfoster.git"
   },
+  "keywords": [
+    "eslint"
+  ],
+  "author": "blogfoster GmbH",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/blogfoster/eslint-config-blogfoster/issues"
   },
+  "homepage": "https://github.com/blogfoster/eslint-config-blogfoster#readme",
   "dependencies": {
     "babel-eslint": "^6.0.3",
     "eslint-config-airbnb": "^7.0.0",
