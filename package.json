@@ -4,7 +4,8 @@
   "description": "blogfoster specific eslint rules",
   "main": "index.js",
   "scripts": {
-    "eslint": "eslint ."
+    "eslint": "eslint .",
+    "test": "npm run eslint"
   },
   "repository": {
     "type": "git",
