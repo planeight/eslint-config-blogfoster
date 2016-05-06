@@ -1,10 +1,10 @@
 module.exports = {
+  parser: 'babel-eslint',
   env: {
     es6: true,
     node: true,
     mocha: true
   },
-  parser: 'babel-eslint',
   rules: {
     'prefer-arrow-callback': 0,
     'arrow-body-style': 0,
