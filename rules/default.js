@@ -16,6 +16,7 @@ module.exports = {
     'no-shadow': 0,
     'no-param-reassign': 0,
     'func-names': 0,
+    'no-underscore-dangle': 0,
     curly: [ 2, 'all' ]
   }
 };
