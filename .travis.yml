@@ -1,9 +1,33 @@
+# run on container based infrastructure
+sudo: false
+
 language: node_js
 node_js:
   - "5"
+
+cache:
+  directories:
+    - "./node_modules"
+
+branches:
+  except:
+    - "/^v[0-9]/" # dont build tags separately as they are build anyway for the push
+
 install:
   - npm prune
   - npm install
-cache:
-  directories:
-    - ./node_modules
+
+script:
+  - npm test
+
+deploy:
+  provider: npm
+  email: npm@blogfoster.com
+  api_key:
+    secure: "N0LFWC4yp4YNrz3v/vV2OGiqE3nerHh0IFnCbLLHvjqTuD/bcI2JJ7P78I5oAUIYSMbtUyAyYX2EJN1ufmqnUiKDPG/Ok167Y16MXuE4RtDnteifHfzlRMeMuEF+uf/VMXcS+pBuukFuCFqdQa2Ml7tTMY2iFsmgpWqltKYzFx3v7eELX/W/H9qxjKEYsV/t0X1M5KLJnUyZPQ9nCRAzLodiMm+Vac62X7ry1EETEKY3byjsO3o42uaH8yc7hhYQr+fRF8PiLEZ/VbM1Y0UZGCWcc3gwQFVVjFi49S4uQmnvoAwqOCCT2P5PowNdKrr6A8pkBiCmuFAMkTINzj4fdbaCzdLqiiYsG5rNuDeffcFsUBKkcTMWj+1FZDi6OsS3McB1d++ryltjF4jJWzZojOlm3hjr/tY1CMsZZcuftLqB+nmMGmkKIQQIrJXh4fQxnheN1JMxHzOvRT20zOcpYQ4RbWn9ZLOBwTeTw9DkNLJjpcAJLdWJUSkVitddpYx4kSjIdRFufp5Vr9r6o+mLCaKa3wj4p3jpK85IhxN3MqYsi0QKPhJVJ2QlfJcAXtj6IWnAj4POaS/tHPJT8rNwXSfVhxZE7X/YKemks8fTLFcvEtf7wIX2wuOp3rRuaO8PMAL+uGU4E/ejz3ZcmDldJEDi1LE2VJgjUm8F+hhqMdM="
+  wait-until-deployed: true
+  skip_cleanup: true
+  on:
+    repo: blogfoster/eslint-config-blogfoster
+    branch: master
+    condition: "$(git describe --exact-match HEAD)" # only deploy if the commit is referenced by a tag as well
