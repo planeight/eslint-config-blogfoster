@@ -7,7 +7,7 @@ module.exports = {
   },
   rules: {
     'prefer-arrow-callback': [ 1, { allowNamedFunctions: true, allowUnboundThis: false } ],
-    'arrow-body-style': [ 1, 'as-needed' ],
+    'arrow-body-style': [ 0 ],
     'array-bracket-spacing': [ 2, 'always' ],
     'comma-dangle': [ 2, 'never' ],
     'space-before-function-paren': [ 2, { anonymous: 'always', named: 'never' } ],
