@@ -1,5 +1,6 @@
 module.exports = {
   parser: 'babel-eslint',
+  plugins: [ 'mocha' ],
   env: {
     es6: true,
     node: true,
@@ -21,6 +22,7 @@ module.exports = {
     'newline-per-chained-call': 0,
     'import/named': 2,
     'import/no-extraneous-dependencies': [ 2, { devDependencies: true } ],
-    'import/prefer-default-export': [ 1 ]
+    'import/prefer-default-export': [ 1 ],
+    'mocha/no-exclusive-tests': 'error'
   }
 };
