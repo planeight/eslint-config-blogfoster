@@ -16,19 +16,20 @@ module.exports = {
     'class-methods-use-this': 'off',
 
     // warnings
-    'prefer-arrow-callback': [
-      'warn',
-      { allowNamedFunctions: true, allowUnboundThis: false },
-    ],
+    // -> we don't want warnings
 
     // errors
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'mocha/no-exclusive-tests': 'error',
+    'prefer-arrow-callback': [
+      'error',
+      { allowNamedFunctions: true, allowUnboundThis: false },
+    ],
     'no-console': 'error',
-    'import/named': 'error',
-    curly: ['error', 'all'],
     'arrow-parens': ['error', 'as-needed'],
     'arrow-body-style': ['error', 'as-needed'],
     'func-style': ['error', 'expression'],
+    curly: ['error', 'all'],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/named': 'error',
+    'mocha/no-exclusive-tests': 'error',
   },
 };
