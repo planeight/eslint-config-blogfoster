@@ -84,8 +84,6 @@ module.exports = {
     // -> we don't want warnings
 
     // errors
-    'no-alert': 'error',
-    'no-console': ['error', { allow: ['warn', 'error'] }],
     'no-restricted-globals': ['error'].concat(restrictedGlobals),
     'react/jsx-boolean-value': 'error',
     'react/jsx-no-undef': 'error',

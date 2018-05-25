@@ -19,11 +19,22 @@ module.exports = {
     // -> we don't want warnings
 
     // errors
+    'no-alert': 'error',
+    'no-console': ['error', { allow: ['warn', 'error'] }],
     'prefer-arrow-callback': [
       'error',
       { allowNamedFunctions: true, allowUnboundThis: false },
     ],
-    'no-console': 'error',
+    'prefer-destructuring': [
+      'error',
+      {
+        AssignmentExpression: { object: false, array: false },
+        VariableDeclarator: {
+          array: false,
+          object: true,
+        },
+      },
+    ],
     'arrow-parens': ['error', 'as-needed'],
     'arrow-body-style': ['error', 'as-needed'],
     'func-style': ['error', 'expression'],
