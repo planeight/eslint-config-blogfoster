@@ -39,6 +39,10 @@ module.exports = {
     'arrow-body-style': ['error', 'as-needed'],
     'func-style': ['error', 'expression'],
     curly: ['error', 'all'],
+    'no-unused-expressions': [
+      'error',
+      { allowShortCircuit: true, allowTernary: true },
+    ],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
     'import/named': 'error',
     'mocha/no-exclusive-tests': 'error',

@@ -77,8 +77,11 @@ module.exports = {
     'react/forbid-prop-types': 'off',
     'react/no-multi-comp': 'off',
     'react/require-default-props': 'off',
+    'react/no-danger': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'jsx-a11y/href-no-hash': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
 
     // warnings
     // -> we don't want warnings
@@ -101,6 +104,14 @@ module.exports = {
     'jsx-a11y/label-has-for': [
       'error',
       { required: { some: ['nesting', 'id'] } },
+    ],
+    'jsx-a11y/anchor-is-valid': [
+      'error',
+      {
+        components: ['Link'],
+        specialLink: ['to'],
+        aspects: ['noHref'],
+      },
     ],
   },
 };
